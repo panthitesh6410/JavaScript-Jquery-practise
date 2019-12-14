@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Jquery E-1</title>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		
+		
+		<img src="sofa1.jpg" width=300 >
+		<br><br>
+		<button id="btn1">Hide</button>
+		<button id="btn2">Show</button>
+		<button id="btn3">Slide Down</button>
+		<button id="btn4">Slide Up</button>
+		
+	
+	</body>
+
+	<script src="js/jquery.js"></script>
+	
+	<script>
+		
+		$(document).ready(function(){
+		
+	//show and hide effect :
+	
+			$("#btn1").click(function()
+			{
+				$("img").hide(1000);
+			});
+			
+			$("#btn2").click(function()
+			{
+			$("img").show(1000);
+	
+			});
+			
+			// '.toggle()' can replace both hide() and show() functions .		
+			
+	// slideing effect :
+	
+			$("#btn3").click(function()
+			{
+				$("img").slideDown(1000);
+			});
+			
+			$("#btn4").click(function()
+			{
+				$("img").slideUp(1000);
+			});
+			
+					
+		});
+		
+	</script>
+</html>

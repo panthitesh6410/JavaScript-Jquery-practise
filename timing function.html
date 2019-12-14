@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Timming Functions</title>
+		<meta charset="utf-8"/>
+		<script>
+			var ID = 0;				// store unique ID of Timer
+			
+			var seconds=0;
+			
+			function print_msg()
+			{
+				document.getElementById("op").innerHTML="5 seconds have passed";
+			}
+			
+			function start()
+			{
+				window.setTimeout(print_msg, 5000);			// 'window.setTimeout' is used to perform some action after some time 
+															// it takes 2 args i.e. (function_name, time);
+															// allows to execute statements ONCE after an interval
+			}
+			
+			function stop()
+			{
+				window.clearTimeout(ID);					// it clears a timer set with setTimeout() method.
+	   		}
+		    
+			
+			// creating a timer using setInterval method.
+			function print()
+			{
+				document.getElementById("ope").innerHTML=seconds+" seconds";
+				seconds++;
+			}
+			
+			function starte()
+			{
+				window.setInterval(print, 1000);		// setInterval allows you to execute statements repeatedly after an interval			
+			}
+			
+			function stope()
+			{
+				window.clearInterval(ID);					// it clears a timer set with setTimeout() method.
+	   		}
+						
+			
+		</script>
+	</head>
+	<body>
+			<button onclick="start()" id="btnadd">start</button>
+			<h2 id="op">some text</h2>
+			<button onclick="stop()" id="btnstop">stop</button>
+		
+			<!-- creating a timer -->
+		
+			<button onclick="starte()" id="btnadd">start</button>
+			<h2 id="ope">some text</h2>
+			<button onclick="stope()" id="btnstop">stop</button>
+		
+	</body>
+</html>

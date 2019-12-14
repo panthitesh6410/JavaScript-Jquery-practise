@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+	
+		<script>
+	
+		function validate()
+		{
+			var str = document.getElementById("phone_no");
+		
+			var regx = /^[6-9]\d{9}/;				// '\d ' used to amtch any digit -- 1st digit will be from 6,7,8,9 and adding next 9 digits more
+													// '^' defines the starting of regx && '$' denotes end of regx					
+			if(regx.test(str)){
+				alert("invalid phone no.");
+			}
+			else{
+				alert("yes, its a valid number");
+			}
+		
+		}
+	
+	</script>
+
+	
+	
+	</head>
+	<body>
+	
+	<input type="text" id="phone_no">
+	<button onclick="validate()">click</button>
+	
+	</body>
+
+	
+</html>
+
+

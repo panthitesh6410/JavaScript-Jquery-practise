@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Jquery Events-1</title>
+		<style>
+			div{
+				border:2px solid red;
+				padding:10px;
+				margin:5px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2 id="heading1">Jquery Demo</h2>
+		<h2 id="heading2">Jquery Demo</h2>
+		<h2 id="heading3">Jquery Demo</h2>
+		<h2 class="heading4">Jquery Demo</h2>
+		
+		<div id="div1">
+			<p>paragraph 1 in div1</p>
+			<p>paragraph 2 in div1</p>
+			<p>paragraph 3 in div1</p>
+		</div>
+		<div id="div2">
+			<p>paragraph 1 in div2</p>
+			<p>paragraph 2 in div2</p>
+			<p>paragraph 3 in div2</p>
+		</div>
+		
+		<button onclick="fn1()" id="btn1">Click Here</button>
+		<button onclick="fn1()" id="btn2">Click Here</button>
+	
+	</body>
+
+	<script src="js/jquery.js"></script>
+	
+	<script>
+			
+	/* this below line of code allows us to run js code after loading of the full document or when html code is loaded.
+			so, it is imp to put every js code inside this function :
+	*/	
+		$(document).ready(function(){
+		
+			// using buttno event in jquery using selectors :
+			// this code is same as using onclick attribute inside a button tag .
+	
+			$("#btn1").click(fn1);			// on clicking btn 1 call function fn1
+
+			function fn1()
+			{
+				$("#div1").fadeToggle();
+			}
+			
+			// when we double clik the btn2 only then div2 wil  fade-in and fade-out.
+			
+			$("#btn2").dblclick(fn2);
+			
+			function fn2()
+			{
+				$("#div2").fadeToggle();
+			}
+					
+		
+		});
+			
+		
+	</script>
+</html>

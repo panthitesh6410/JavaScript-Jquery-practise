@@ -1,0 +1,50 @@
+<html>
+	<head><title>regular expressions</title></head>
+	<body>
+		<form>
+			<input type="text" id="username">
+			<label id="alert1" style="color:red;visibility:hidden;">invalid entry</label>
+			<button type="submit" onclick="validate1()">submit</button>
+		</form>
+		
+		<form>
+			<input type="text" id="text1">
+			<label id="alert2" style="color:red;visibility:hidden;">invalid entry</label>
+			<button type="submit" onclick="validate2()">submit</button>
+		</form>
+	</body>
+</html>
+
+<script type="text/javascript">
+	
+	function validate1()
+	{
+		var user = document.getElementById("username").value;
+		var regx = /E00/;					// creating a regular expression variable.
+		//  OR creating a regular expression object ------->  regx = new RegExp("E00","i");
+		if(regx.test(user))					//'.test' matches the regx with username
+			alert("accepted");
+		else
+		{
+			alert("invalid entry");
+			document.getElementById("alert1").style.visibility="visible";
+		}	
+	}
+	
+	function validate2()
+	{
+		var regx = /[sdp]imple/;			// expression starts with s,d,p will be accepted succeded by 'imple'
+		// var regx = /[a-z A-Z]imple/		// expression starts any charater between a-z or A-Z will be accepted succeded by 'imple'
+		// var regx = /[0-9]imple/;
+		if(regx.test(text1))					//'.test' matches the regx with username
+			alert("accepted");
+		else
+		{
+			alert("invalid entry");
+			document.getElementById("alert2").style.visibility="visible";
+		}	
+	}
+	
+	
+	
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Jquery selectors-1</title>
+	</head>
+	<body>
+		<h2 id="heading1">Jquery Demo</h2>
+		<h2 id="heading2">Jquery Demo</h2>
+		<h2 id="heading3">Jquery Demo</h2>
+		<h2 class="heading4">Jquery Demo</h2>
+		
+		<button onclick="fn1()" id="btn1">Click Here</button>
+	
+	</body>
+
+	<script src="js/jquery.js"></script>
+	
+	<script>
+	
+	/* jquery selectors allows you to select  and manipulate html element ob basis of their classes, id, attributes, etc. 
+	
+	types of selectors :
+	
+		1. element selectors
+		2. id selectors
+		3. class selecors.
+	
+	*/
+	
+		function fn1()
+		{
+			// syntax of selectors :
+			
+			// $("h2").action()							--> for selecting h2 tag, 'action()' is inbult function.
+			
+			//$("h2").fadeToggle();			// for fade-in or fade-out all h2 tags.
+			
+			
+			$("#heading1").fadeToggle();	// for fade-in or fade-out a particular h2 tag using its 'id'.
+			
+			$(".heading4").fadeToggle();	// for fade-in or fade-out a particular h2 tag using its 'class'.
+			
+			
+		}
+		
+	</script>
+</html>

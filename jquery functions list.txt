@@ -1,0 +1,29 @@
+jquery in-built functions list :
+
+		1. fadeOut();
+		2. fadeIn();
+		3. fadeToggle();
+		4. hide();
+		5. show();
+		6. toggle();
+		7. slideDown();
+		8. slideUp();
+		9. slideToggle();
+		
+			// in above funtions parameters can also be passed like : fadeOut(2000), hide(2000)...
+			
+		
+		10. animate(css-styling, time, call-back)				--> call-back is not compulsory
+		11. text() 												--> used to get the text of selected HTML tag
+		12. css()												--> sets or return the style attributes
+		13. append() 											-->	inserts content at end of the selected element
+		14. after() 											--> insert content after the selected element
+		15. prepend() 											--> insert content at the beginning of the selected element
+		16. before() 											--> insert content  before  the selected element
+		17. remove() 											--> the entire element which is selected
+		18. empty()                                        		--> insert content inside the selected element
+		19. addClass()											--> adds one or more classes css property to the slelected elements
+		20. removeClass()										--> remove one or more css property  from the selected elements 
+		21. toggleClass()										--> toggle between adding / removing classes from selected element
+		
+	

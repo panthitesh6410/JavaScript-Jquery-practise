@@ -1,0 +1,23 @@
+	<! DOCTYPE HTML>
+	<html>
+		<head>
+			<meta charset="utf-8"/>
+			<title>DOM manipulation</title>
+		</head>
+		<body>
+			<button onclick="button_click()">Click Here</button>
+			<p id="paragraph">welcome </p>
+		</body>
+	</html>
+
+	<script type="text/javascript">
+		
+		function button_click()		// this fuction changes the text in p tag on clikcing the button.
+		{
+			//alert("You clicked button");
+			var str = document.getElementById("paragraph").innerHTML="hello world";			//'.ineerHTML' get text from a text and perform changes in it
+			alert(str);
+		}
+		
+	</script>
+		

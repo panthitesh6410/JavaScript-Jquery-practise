@@ -1,0 +1,29 @@
+	<! DOCTYPE HTML>
+	<html>
+		<head>
+			<meta charset="utf-8"/>
+			<title> mouse hover effect </title>
+		</head>
+		<body>
+					
+			<img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()" src="sofa1.jpg" width="500" height="400"/>
+
+		
+		</body>
+	</html>
+
+	<script type="text/javascript">
+		
+		// set new image on mouse hover
+		function setNewImage(){
+			document.getElementById('img1').src="sofa2.jpg";					//'.src attribute is useed to set new image src'		
+		}
+		
+		// set old image on mouse out action
+		function setOldImage(){
+			document.getElementById('img1').src="sofa1.jpg";
+		}
+		
+		
+	</script>
+		

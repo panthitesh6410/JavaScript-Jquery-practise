@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Jquery Events-1</title>
+		<style>
+			div{
+				border:2px solid red;
+				padding:10px;
+				margin:5px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		
+		<img src="sofa1.jpg" width=300 >
+		<br><br>
+		<button onclick="fn1()" id="btn1">Click Here</button>
+		
+	
+	</body>
+
+	<script src="js/jquery.js"></script>
+	
+	<script>
+			
+		$(document).ready(function()
+		{
+			
+		/*	
+			$("img").mouseenter(fn1);		// on mouse hover-in on image , function fn1 will be called.
+			
+			$("img").mouseleave(fn2);
+		*/
+				
+			function fn1()
+			{
+				$("img").fadeOut(1000);
+			}
+			
+			function fn2()
+			{
+				$("img").fadeIn(1000);
+			}
+			
+			
+			$("img").hover(fn1,fn2);		// this is alternate way of doing daein and fade out as done by code in lines 30-34.
+		
+		
+		});
+	
+		
+	</script>
+</html>

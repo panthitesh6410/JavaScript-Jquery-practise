@@ -1,0 +1,67 @@
+	<! DOCTYPE HTML>
+	<html>
+		<head>
+			<meta charset="utf-8"/>
+			<title>Objects</title>
+		</head>
+		<body>
+					
+			
+		</body>
+	</html>
+
+	<script type="text/javascript">
+		
+		// creating objects :
+		
+		//method 1: literal object way :
+		var car = {
+			car_brand : "Tesla",
+			car_model : "model 3",
+			price : 50000,
+			
+			testAutoPilot : function()
+			{
+				return "this car is suitable for auto-pilot";
+			}
+		}
+		
+		document.write("<h2>"+car.testAutoPilot()+"</h2>");
+		
+		
+		
+		// method 2: object constructors :
+		
+		function person(name, age, color)			//class or template
+		{
+			this.name = name;
+			this.age = age;
+			this.color = color;
+			
+			this.talk = function()
+			{
+				document.write("<br>hello my name is "+name);
+			}
+		}
+		
+		//creating objects of calss person :
+		var p1 = new person("hitesh", 19, "fair");
+		var p2 = new person("rashi", 17, "fair");
+		
+		p1.talk();
+		p2.talk();
+	
+		// adding a new property in class :
+		person.language = "hindi";
+		
+		// deleting a property in class :
+		delete person.language;
+			
+		// using typeof() --> it is used to tell the datatype of an entity :
+		
+		document.write("<br>"+typeof(car));
+		document.write("<br>"+typeof(person));		
+	
+	</script>
+		
+	

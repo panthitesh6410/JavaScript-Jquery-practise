@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Jquery animate effect</title>
+		<style>
+			img{
+				position: absolute;
+				opacity:0.4;
+				top:550px;
+			}
+			div{
+				position:absolute;
+				
+			}
+		</style>
+	</head>
+	<body>
+		
+		<h2 id="heading1">Jquery Demo</h2>
+		<h2 id="heading2">Jquery Demo</h2>
+		<h2 id="heading3">Jquery Demo</h2>
+		<h2 class="heading4">Jquery Demo</h2>
+		
+		<div id="div1">
+			<p>paragraph 1 in div1</p>
+			<p>paragraph 2 in div1</p>
+			<p>paragraph 3 in div1</p>
+		</div>
+		<div id="div2">
+			<p>paragraph 1 in div2</p>
+			<p>paragraph 2 in div2</p>
+			<p>paragraph 3 in div2</p>
+		</div>
+		
+	<br><br>	<br><br><br><br>
+		<img src="sofa1.jpg" width=300 >
+		<br><br>
+		<button id="btn1">Hide</button>
+		<button id="btn2">Show</button>
+		<button id="btn3">Slide Down</button>
+		<button id="btn4">Slide Up</button>
+		<button id="btn5">animate</button>
+		
+	
+	</body>
+
+	<script src="js/jquery.js"></script>
+	
+	<script>
+		
+		$(document).ready(function(){
+		
+	//show and hide effect :
+	
+			$("#btn1").click(function()
+			{
+				$("img").hide(1000);
+			});
+			
+			$("#btn2").click(function()
+			{
+			$("img").show(1000);
+	
+			});
+			
+			// '.toggle()' can replace both hide() and show() functions .		
+			
+	// slideing effect :
+	
+			$("#btn3").click(function()
+			{
+				$("img").slideDown(1000);
+			});
+			
+			$("#btn4").click(function()
+			{
+				$("img").slideUp(1000);
+			});
+			
+			
+			
+			/* 'animate()' function takes 3 parameters :
+					1. css styling
+					2. time
+					3. call-back  (not mandatory)			
+			*/
+			
+			
+			$("#btn5").click(function()
+			{
+				$("div").animate(
+				{
+					left:'400px',
+					opacity:'0.5',
+					
+				}, 1000);
+				
+				$("img").animate(
+				{
+					top:'190px',
+					opacity:'1'
+				}, 2000, function(){alert("animation done. (call back function)");});		// 'call-back' calls something only after the effect is done.
+			});
+			
+		});
+		
+	</script>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>jquery DOM manipulation</title>
+		
+		<style>
+			#div1{
+				
+				width:500px;
+				height:200px;
+				background-color:yellow;
+				border: 5px solid gold;
+				box-shadow: 15px 15px #ddd;
+				padding:10px;
+			}
+			#div2{
+				
+				width:500px;
+				height:200px;
+				background-color:yellow;
+				border: 5px solid gold;
+				box-shadow: 15px 15px #ddd;
+				padding:10px;
+			}
+			
+			div{		
+				margin:50px;
+			}
+			#div3{
+				border:6px dotted green;
+				padding:20px;
+				width:300px;
+				
+			}
+			.divs{
+				border:10px solid pink;
+				box-shadow:20px 20px #ddd;
+				border-radius: 20px;
+			}
+		</style>
+	
+	</head>
+	<body>
+	
+	
+		<button id="btn1">get the text of html tag p insode div1 </button>
+		<button id="btn2">changing the text of p tag in div2 </button>
+		<br><br>
+		<div id="div1" class="divs">
+			<p class="p1">this is p tag inside a div tag</p>
+		</div>
+		<div id="div2" class="divs">
+			<p class="p1">this is p tag inside a div tag</p>
+		</div>
+		
+		
+		
+		<br><br>
+		<div class="buttons">
+			<button id="button1">Append</button>
+			<button id="button2">After</button>
+			<button id="button3">Prepend</button>
+			<button id="button4">Before</button>
+			<button id="button5">Remove</button>
+			<button id="button6">Empty</button>
+		</div>
+		
+		<div id="div3" class="mydivs">
+			<p id="p1" class="p1class">this is <b>paragraph</b> inside division</p>
+			<p id="p2" class="p1class">this is another<b>paragraph</b> inside division</p>
+		</div>	
+		
+		
+			<button id="b1">Add class</button>
+			<button id="b2">Remove class</button>
+			<button id="b3">Toggle class</button>
+			<button id="b4">CSS</button>
+		
+		
+		
+	</body>
+	
+	<script src="js/jquery.js"></script>
+	
+	<script>
+			
+			$(document).ready(function()
+			{
+				
+				
+				$("#div1").mouseenter(function()
+				{
+					$("#div1").animate({height:'400px', width:'600px',opacity:'0.5'}, 1000);
+				});
+				
+				$("#div1").mouseleave(function()
+				{
+					$("#div1").animate({height:'200px',width:'500px',opacity:'1'}, 1000);
+				});
+				
+				$("#div2").mouseenter(function()
+				{
+					$("#div2").animate({height:'400px', width:'600px',opacity:'0.5'}, 1000);
+				});
+				
+				$("#div2").mouseleave(function()
+				{
+					$("#div2").animate({height:'200px',width:'500px',opacity:'1'}, 1000);
+				});
+				
+				
+	
+				// to get text of a HTML tag :  
+
+				$("#btn1").click(function(){
+					//alert($('.p1').text());		       //'.text() is used to get the text of selected HTML tag'
+							// OR 
+					var txt = $('.p1').text();
+					alert(txt);
+				});
+	
+				// to change the html text :
+				
+				$("#btn2").click(function(){
+					alert($(".p2").css("font-family"));				// for getting the css styling of an html element/attribute.
+					
+					// to set new css styling :
+					$(".p2").css("font-family", "comic sans MS");
+					
+				})
+				
+			});
+		
+	
+	
+			
+			//append () inserts content at end of the selected element
+			
+			$("#button1").click(function(){
+				$("#div3").append("<p>this is appended by append() method</p>");
+			});
+			
+			// after()insert content after the selected element
+			
+			$("#button2").click(function(){
+				$("#div3").after("<p>this is added by after() method</p>");
+			});
+			
+			// prepend() insert content at the beginning of the selected element
+			
+			$("#button3").click(function(){
+				$("#div3").after("<p>this is added by prepend() method</p>");
+			});
+			
+			// before() insert content  before  the selected element
+			
+			$("#button4").click(function(){
+				$("#div3").before("<p>this is added by before() method</p>");
+			});
+			
+			// remove() the entire element which is selected
+			
+			$("#button5").click(function(){
+				$("#div3").remove();
+				
+				/* for removing specific element :
+					e$("p").remove("#p2");	
+				*/
+			});
+			
+			// empty() insert content inside the selected element
+			
+			$("#button6").click(function(){
+				$("#div3").empty();
+			});
+		
+		
+		
+		
+			// addClass()	- adds one or more classes css property to the slelected elements
+			
+			$("#b1").click(function(){
+				$("#div3").addClass("divs");			// here we are applying css property of another class to selected class.
+			});
+			
+			
+			// removeClass()	- remove one or more css property  from the selected elements
+			
+			$("#b2").click(function(){
+				$("#div3").removeClass("divs");			
+			});
+				
+			
+			// toggleClass()	- toggle between adding / removing classes from selected element
+			
+			$("#b3").click(function(){
+				$("#div3").toggleClass("divs");			
+			});
+			
+			
+			// css()	- sets or return the style attributes
+		
+			$("#b4").click(function(){
+				alert($("#div3").css("font-size"));			// getting css property of selected element
+
+				$("#div3").css("font-size", "30px");		// changing css property of slelected element
+			});
+		
+	</script>
+
+	
+</html>

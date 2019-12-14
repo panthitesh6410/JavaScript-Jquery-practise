@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>console.log method</title>
+		
+		<script>
+			
+			function addition()
+			{
+				var a = document.getElementById("t1").value;
+				var b = document.getElementById("t2").value;
+				document.getElementById("ans").innerHTML="Result is :"+(a+b);
+				
+				console.log(a+b);		// console.log is used to print things in console of browser.
+				
+			}
+		
+		</script>
+		
+	</head>
+	<body>
+	
+		<input type="text" id="t1" placeholder="no.1"><br><br>
+		<input type="text" id="t2" placeholder="no.2"><br><br>
+		<button onclick="addition()" id="btnadd">Add</button>
+		<h2 id="ans">Result is :</h2>
+	
+	</body>
+</html>

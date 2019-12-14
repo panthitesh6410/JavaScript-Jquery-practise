@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<div>
+			what is my name :<br>
+			<input type="radio" id="q11" name="question1" value="ram">kallu<br>
+			<input type="radio" id="q12" name="question1" value="ramu">ramu<br>
+			<input type="radio" id="q13" name="question1" value="hitesh">hitesh<br>
+			<input type="radio" id="q14" name="question1" value="atul">atul<br>
+		</div>
+		<br>
+		<div>
+			what is my surname :<br>
+			<input type="radio" id="q21" name="question2" value="ram">ram<br>
+			<input type="radio" id="q22" name="question2" value="pant">pant<br>
+			<input type="radio" id="q23" name="question2" value="hitesh">hitesh<br>
+			<input type="radio" id="q24" name="question2" value="atul">atul<br>
+		</div>
+		<br>
+		<button onclick="submit()">submit</button>
+		<br><br><br>
+		<p>NOTE : You have 30 minutes to complete the quiz and you will be automatically informed when the time is over</p>
+		
+			<script>
+
+			// TIMER :
+			
+			var timer = window.setInterval(function(){
+				alert("time is over!");
+				setInterval(function(){alert("The End")}, 500)
+			}, 180000)
+			
+			
+			var count=0;
+			function submit()
+			{
+				if(document.getElementById("q13").checked)
+					count++;
+				if(document.getElementById("q22").checked)
+					count++;
+				if(count<2)
+					alert("Your Score is "+count+"/2");
+				if(count == 2){
+					alert("Congratullations!"+"Your score is "+count+"/2")
+				}
+			}
+			
+		</script>
+		
+	</body>
+
+</html>
